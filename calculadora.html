@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Bianca Araceli Domingo Catarina--> 
+        <title>CALCULADORA HTML5 Y bootstrap</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+    <h1>CALCULADORA BETA 1.0</h1>
+        <!---->
+
+        <input type="text" id="txtvalor1" placeholder="Inglesa un valor Numerico">
+        <input type="text" id="txtvalor2" placeholder="Inglesa un segundo Numerico">
+        <br>
+        <div id="lblResultado"></div>
+        <!--Existen para los botones varios eventos preterminados, pero para este caso,
+        utilizaremos el evento onclick, que basicamente dispara la funcionalidad
+        javascript llamada calcular()-->
+        <button onclick="calcular()">Sumar Valores</button>
+
+        <script>
+            function calcular(){
+                let val1= document.getElementById("txtvalor1").value;
+                let val2= document.getElementById("txtvalor2").value;
+
+                console.log("El valor1 ingresado desde formulario es: " + val1);
+                console.log("El valor2 ingresado desde formulario es: " + val2);
+
+                //parseInt convertir a enteros
+                //parseFloat convertir a decimales
+                let num1= parseFloat(val1);
+                let num2= parseFloat(val2);
+
+                let suma= num1 + num2;
+                
+
+                document.getElementById("lblResultado").innerHTML ="la suma de los valores ingresados es: "+ suma;
+            }
+        </script>
+
+    
+    <script src="bootstrap.bundle.min.js"></script>
+    </body>
+</html>
